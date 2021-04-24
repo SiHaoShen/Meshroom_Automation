@@ -12,6 +12,9 @@ echo %count%
 echo %var%
 cd "%var%"
 python run_alicevision.py build_files %Location% "Meshroom-2018.1.0\\aliceVision\\bin\\" %count% runall
+cd build_files/11_Texturing
+set /p Input=Give your 3D-mesh a name: 
+obj2gltf -i texturedMesh.obj -o %var%/%Input%.gltf
 endlocal
 pause
 ::***************************************************************************
